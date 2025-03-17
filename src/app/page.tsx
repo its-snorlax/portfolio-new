@@ -31,7 +31,14 @@ export default function Home() {
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-indigo-500 dark:border-indigo-400 shadow-lg">
                 <Image
-                  src="/images/profile.jpg"
+                  src={typeof window !== 'undefined'
+                    ? window.location.hostname !== 'localhost'
+                      ? '/portfolio-new/images/profile.jpg'
+                      : '/images/profile.jpg'
+                    : process.env.NODE_ENV === 'production'
+                      ? '/portfolio-new/images/profile.jpg'
+                      : '/images/profile.jpg'
+                  }
                   alt="Profile"
                   width={500}
                   height={300}
