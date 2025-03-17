@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import Button from "./ui/button";
 
 const sections = [
@@ -37,24 +37,29 @@ export default function Nav() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <a href="/" className="text-xl font-bold">
-          Portfolio
-        </a>
-        <div className="hidden gap-4 md:flex">
-          {sections.map((section) => (
-            <Button
-              key={section.id}
-              variant={activeSection === section.id ? "primary" : "outline"}
-              size="sm"
-              onClick={() => {
-                document.getElementById(section.id)?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}
-            >
-              {section.label}
-            </Button>
-          ))}
+        <div className="flex items-center gap-4">
+          <Link
+            href="/"
+            className="text-xl font-bold text-gray-900 dark:text-white"
+          >
+            Portfolio
+          </Link>
+          <nav className="hidden md:flex items-center gap-6">
+            {sections.map((section) => (
+              <Button
+                key={section.id}
+                variant={activeSection === section.id ? "primary" : "outline"}
+                size="sm"
+                onClick={() => {
+                  document.getElementById(section.id)?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                {section.label}
+              </Button>
+            ))}
+          </nav>
         </div>
       </div>
     </nav>
