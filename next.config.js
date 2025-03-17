@@ -5,6 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NODE_ENV === 'production' ? '/my-portfolio' : '',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig; 
