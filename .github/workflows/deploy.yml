@@ -36,7 +36,12 @@ jobs:
       - name: Build
         run: |
           npm run build
+          echo "Build output directory contents:"
           ls -la out/
+          echo "Checking for index.html:"
+          ls -la out/index.html || echo "index.html not found"
+          echo "Checking for _next directory:"
+          ls -la out/_next || echo "_next directory not found"
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
