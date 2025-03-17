@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100`}>
+      <body className={`${inter.className} bg-gradient-to-br from-blue-50 via-violet-50 to-fuchsia-50 dark:from-blue-950 dark:via-violet-950 dark:to-fuchsia-950 text-gray-900 dark:text-gray-100 min-h-screen`}>
         <Nav />
         <main className="min-h-screen pt-16">
           {children}
