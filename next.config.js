@@ -6,10 +6,11 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   basePath: isProduction ? `/${repoName}` : '',
-  assetPrefix: isProduction ? `/${repoName}` : '',
+  assetPrefix: isProduction ? `/${repoName}/` : '',
   images: {
     unoptimized: true,
-    path: isProduction ? `/${repoName}/_next/image` : '/_next/image'
+    loader: 'custom',
+    loaderFile: './src/utils/imageLoader.ts',
   },
 }
 

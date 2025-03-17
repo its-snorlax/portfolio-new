@@ -8,7 +8,7 @@ import Timeline from "@/components/timeline";
 import { portfolioData } from "@/data/portfolio";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { GitHubIcon, LinkedInIcon, LeetCodeIcon, GeeksforGeeksIcon, EducationSectionIcon, ExperienceSectionIcon } from "@/components/social-icons";
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -31,11 +31,12 @@ export default function Home() {
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-indigo-500 dark:border-indigo-400 shadow-lg">
                 <Image
-                  src={portfolioData.imageUrl}
-                  alt={portfolioData.name}
-                  fill
-                  className="object-cover transform hover:scale-110 transition-transform duration-300"
+                  src="/images/profile.jpg"
+                  alt="Profile"
+                  width={500}
+                  height={300}
                   priority
+                  className="object-cover transform hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
               </div>
