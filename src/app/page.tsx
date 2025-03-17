@@ -8,7 +8,7 @@ import Timeline from "@/components/timeline";
 import { portfolioData } from "@/data/portfolio";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { GitHubIcon, LinkedInIcon, LeetCodeIcon, GeeksforGeeksIcon, EducationSectionIcon, ExperienceSectionIcon } from "@/components/social-icons";
-import Image from 'next/image'
+import { OptimizedImage } from '@/components/common/OptimizedImage'
 
 export default function Home() {
   return (
@@ -30,15 +30,8 @@ export default function Home() {
               className="relative mb-8"
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-indigo-500 dark:border-indigo-400 shadow-lg">
-                <Image
-                  src={typeof window !== 'undefined'
-                    ? window.location.hostname !== 'localhost'
-                      ? '/portfolio-new/images/profile.jpg'
-                      : '/images/profile.jpg'
-                    : process.env.NODE_ENV === 'production'
-                      ? '/portfolio-new/images/profile.jpg'
-                      : '/images/profile.jpg'
-                  }
+                <OptimizedImage
+                  src="/images/profile.jpg"
                   alt="Profile"
                   width={500}
                   height={300}
