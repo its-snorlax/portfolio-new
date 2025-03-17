@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio
+
+A beautiful, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🎨 Modern and clean design
+- 📱 Fully responsive
+- 🌙 Dark mode support
+- ⚡ Fast performance
+- 🎭 Smooth animations
+- 📝 Easy to customize
+- 🚀 GitHub Pages deployment
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/my-portfolio.git
+   cd my-portfolio
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
 
-## Learn More
+1. Edit your information in `src/data/portfolio.ts`:
+   - Update your name, title, and about section
+   - Add your projects
+   - Add your work experience
+   - Update your skills
+   - Add your social links
 
-To learn more about Next.js, take a look at the following resources:
+2. Add your project images to the `public/projects` directory
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Customize the styling:
+   - Colors and theme in `tailwind.config.js`
+   - Component styles in their respective files
+   - Global styles in `src/app/globals.css`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This portfolio is configured to deploy to GitHub Pages automatically when you push to the main branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a new repository on GitHub
+2. Push your code to the repository
+3. Go to your repository settings
+4. Navigate to "Pages" in the sidebar
+5. Under "Source", select "GitHub Actions"
+6. Your portfolio will be deployed automatically
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site will be available at `https://yourusername.github.io/my-portfolio`
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [GitHub Actions](https://github.com/features/actions)
+- [GitHub Pages](https://pages.github.com/)
+
+## License
+
+MIT
