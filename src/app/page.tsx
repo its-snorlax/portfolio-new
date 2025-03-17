@@ -6,7 +6,7 @@ import SkillsShowcase from "@/components/skills-showcase";
 import Timeline from "@/components/timeline";
 import { portfolioData } from "@/data/portfolio";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { GitHubIcon, LinkedInIcon, LeetCodeIcon, GeeksforGeeksIcon, EducationSectionIcon, ExperienceSectionIcon } from "@/components/social-icons";
+import { GitHubIcon, LinkedInIcon, LeetCodeIcon, GeeksforGeeksIcon, EducationSectionIcon, ExperienceSectionIcon, SkillsSectionIcon } from "@/components/social-icons";
 import { OptimizedImage } from '@/components/common/OptimizedImage'
 
 export default function Home() {
@@ -70,10 +70,22 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <SkillsShowcase skills={portfolioData.skills} />
-          </div>
+        <section id="skills" className="py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-white flex items-center justify-center gap-2">
+              <SkillsSectionIcon className="h-8 w-8 text-indigo-500 dark:text-indigo-400" />
+              Technical Skills
+            </h2>
+            <div className="container mx-auto px-4">
+              <SkillsShowcase skills={portfolioData.skills} />
+            </div>
+          </motion.div>
         </section>
 
         {/* Education Section */}
