@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Button from "@/components/ui/button";
-import ThemeToggle from "@/components/theme-toggle";
 import SkillsShowcase from "@/components/skills-showcase";
 import Timeline from "@/components/timeline";
 import { portfolioData } from "@/data/portfolio";
@@ -13,7 +12,6 @@ import { OptimizedImage } from '@/components/common/OptimizedImage'
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
-      <ThemeToggle />
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <section id="hero" className="mb-16">
@@ -72,19 +70,10 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-white">
-              Skills
-            </h2>
+        <section className="py-16">
+          <div className="container mx-auto px-4">
             <SkillsShowcase skills={portfolioData.skills} />
-          </motion.div>
+          </div>
         </section>
 
         {/* Education Section */}
