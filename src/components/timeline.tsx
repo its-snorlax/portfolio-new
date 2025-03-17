@@ -63,7 +63,7 @@ export default function Timeline({ items }: TimelineProps) {
                 <div className="flex flex-col">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-col items-center w-full">
-                      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 text-center">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center">
                         {item.title.includes("(") ? (
                           <>
                             {item.title.split("(")[0]}
@@ -74,15 +74,25 @@ export default function Timeline({ items }: TimelineProps) {
                           item.title
                         )}
                       </h3>
-                      <span className="text-sm text-gray-600 dark:text-gray-300 text-center">
+                      <span className="text-sm text-gray-500 dark:text-gray-400 text-center">
                         {item.date}
                       </span>
                     </div>
                   </div>
                 </div>
-                <p className="text-base font-medium text-gray-700 dark:text-gray-200 text-center">
-                  {item.subtitle}
-                </p>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-violet-500/10 to-fuchsia-500/10 dark:from-blue-400/10 dark:via-violet-400/10 dark:to-fuchsia-400/10 rounded-lg blur-sm group-hover:blur-md transition-all duration-300" />
+                  <p className={cn(
+                    "text-xl font-bold text-center relative z-10",
+                    "bg-gradient-to-r from-blue-600 via-violet-600 to-fuchsia-600 dark:from-blue-400 dark:via-violet-400 dark:to-fuchsia-400",
+                    "bg-clip-text text-transparent",
+                    "group-hover:from-blue-500 group-hover:via-violet-500 group-hover:to-fuchsia-500 dark:group-hover:from-blue-300 dark:group-hover:via-violet-300 dark:group-hover:to-fuchsia-300",
+                    "transition-all duration-300",
+                    "hover:scale-105 transform"
+                  )}>
+                    {item.subtitle}
+                  </p>
+                </div>
               </div>
               {item.description && !item.isEducation && (
                 <p className="mb-4 text-gray-700 dark:text-gray-200">
@@ -90,7 +100,7 @@ export default function Timeline({ items }: TimelineProps) {
                 </p>
               )}
               {item.technologies && (
-                <div className="mb-4 flex flex-wrap gap-2">
+                <div className="mb-4 flex flex-wrap gap-2 justify-center">
                   {item.technologies.map((tech, i) => (
                     <span
                       key={i}
