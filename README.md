@@ -68,7 +68,7 @@ The site will be available at `https://yourusername.github.io/my-portfolio`
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [GitHub Actions](https://github.com/features/actions)
-- [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://its-snorlax.github.io/portfolio-new/)
 
 ## License
 
